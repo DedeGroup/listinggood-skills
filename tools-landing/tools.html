@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google" content="notranslate">
+<title>ListingGood — 在你常用的 AI 里免费用亚马逊 Listing 工具</title>
+<style>
+  :root{
+    --bg:#f3f2ef; --card:#ffffff; --ink:#2b2b30; --muted:#5d5d66;
+    --line:#e7e4df; --soft:#f6f4f1; --accent:#3b5a82; --danger:#9a9a9e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
+  header{position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:16px 0;background:rgba(255,255,255,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .logo{font-weight:800;font-size:22px;letter-spacing:-.5px;}
+  .logo span{color:var(--muted);font-weight:500;}
+  .navbtns{display:flex;gap:10px;align-items:center;}
+  button{font-family:inherit;cursor:pointer;border:none;border-radius:10px;font-size:14px;
+    padding:10px 18px;transition:.15s;background:var(--soft);color:var(--ink);}
+  button:hover{background:#e6e6e9;}
+  button.primary{background:var(--accent);color:#fff;}
+  button.primary:hover{background:#2c476b;}
+  .notranslate{translate:none !important;}
+  .hero{padding:64px 0 40px;text-align:center;}
+  .eyebrow{display:inline-block;font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;
+    color:var(--muted);border:1px solid var(--line);border-radius:30px;padding:5px 13px;margin-bottom:22px;}
+  .hero h1{font-size:clamp(30px,4vw,46px);letter-spacing:-1.5px;line-height:1.1;margin-bottom:18px;}
+  .hero p{font-size:17px;color:var(--muted);max-width:640px;margin:0 auto 28px;line-height:1.65;}
+  .langwrap{display:flex;gap:8px;justify-content:center;margin-bottom:30px;}
+  .langwrap button{padding:7px 16px;font-size:13px;}
+  .langwrap button.active{background:var(--ink);color:#fff;}
+  /* channel cards */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin:40px 0;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;}
+  .card .tag{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:700;}
+  .card h3{font-size:20px;margin:8px 0 6px;letter-spacing:-.5px;}
+  .card .sub{font-size:13.5px;color:var(--muted);margin-bottom:16px;}
+  .card ul{list-style:none;font-size:13.5px;line-height:1.9;color:#3a3a3e;}
+  .card ul li{padding-left:18px;position:relative;}
+  .card ul li:before{content:"›";position:absolute;left:0;color:var(--accent);font-weight:700;}
+  .card code{background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:2px 6px;font-size:12.5px;}
+  .card .flag{display:inline-block;font-size:11px;border-radius:6px;padding:2px 8px;margin-bottom:10px;font-weight:700;}
+  .flag.en{background:#e6f1fb;color:#185fa5;}
+  .flag.zh{background:#eaf3de;color:#27500a;}
+  .cta-strip{background:var(--ink);color:#fff;border-radius:16px;padding:36px;text-align:center;margin:30px 0;}
+  .cta-strip h2{font-size:26px;letter-spacing:-1px;margin-bottom:12px;}
+  .cta-strip p{color:#cfcfd4;margin-bottom:20px;font-size:15px;}
+  .cta-strip a{display:inline-block;background:#fff;color:var(--ink);border-radius:10px;padding:12px 26px;font-weight:600;font-size:15px;}
+  footer{text-align:center;color:var(--muted);font-size:13px;padding:30px 0 50px;}
+  @media(max-width:760px){.grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+    <div class="logo">Listing<span>good</span></div>
+    <div class="navbtns">
+      <a href="/scan"><button>免费体检 / Free Scan</button></a>
+      <a href="/"><button class="primary">进入工作台 / App</button></a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <span class="eyebrow" data-i18n="eyebrow">免费工具 · 随处可用</span>
+    <h1 data-i18n="h1">在你常用的 AI 里，免费用 ListingGood</h1>
+    <p data-i18n="sub">不用切换平台。把亚马逊 Listing 写作、标题优化、合规检查装进 Claude、Cursor、ChatGPT、扣子，或 WorkBuddy —— 写一次工具，所有 AI 都能帮你出合规又好卖的 Listing。</p>
+    <div class="langwrap">
+      <button id="btnZh" onclick="setLang('zh')">中文</button>
+      <button id="btnEn" onclick="setLang('en')">English</button>
+    </div>
+  </section>
+
+  <div class="grid">
+    <!-- MCP -->
+    <div class="card">
+      <span class="flag en">ENGLISH</span>
+      <div class="tag">MCP SERVER</div>
+      <h3 data-i18n="mcp_t">MCP Server（跨平台）</h3>
+      <div class="sub" data-i18n="mcp_s">Claude Desktop · Cursor · VS Code · Windsurf · Cline</div>
+      <ul>
+        <li data-i18n="mcp_1">4 个工具：生成 Listing / 优化标题 / 写五点 / 合规审计</li>
+        <li data-i18n="mcp_2">本地运行，无需 API key、无网络调用</li>
+        <li data-i18n="mcp_3"><code>pip install listinggood-mcp</code></li>
+        <li data-i18n="mcp_4">配置 <code>mcpServers</code> 后重启客户端即生效</li>
+      </ul>
+    </div>
+    <!-- GPTs -->
+    <div class="card">
+      <span class="flag en">ENGLISH</span>
+      <div class="tag">CHATGPT GPTS</div>
+      <h3 data-i18n="gpt_t">GPTs Store（英文）</h3>
+      <div class="sub" data-i18n="gpt_s">全球最大 AI 用户群，公开可搜索</div>
+      <ul>
+        <li data-i18n="gpt_1">搜索 "ListingGood Amazon Optimizer" 一键安装</li>
+        <li data-i18n="gpt_2">在 ChatGPT 里直接生成合规 Listing</li>
+        <li data-i18n="gpt_3">免费使用，输出末尾引导到完整 SaaS</li>
+        <li data-i18n="gpt_4">需 ChatGPT Plus/Pro 账号发布</li>
+      </ul>
+    </div>
+    <!-- Coze -->
+    <div class="card">
+      <span class="flag zh">中文</span>
+      <div class="tag">COZE 扣子</div>
+      <h3 data-i18n="coze_t">Coze 扣子 Bot（中文）</h3>
+      <div class="sub" data-i18n="coze_s">中国跨境卖家最活跃的 AI 平台</div>
+      <ul>
+        <li data-i18n="coze_1">中文「亚马逊 Listing 优化助手」公开 Bot</li>
+        <li data-i18n="coze_2">零代码搭建，支持工作流与知识库</li>
+        <li data-i18n="coze_3">在扣子里直接生成中文 Listing 文案</li>
+        <li data-i18n="coze_4">发布后中文卖家搜索即可用</li>
+      </ul>
+    </div>
+    <!-- WorkBuddy -->
+    <div class="card">
+      <span class="flag zh">中文</span>
+      <div class="tag">WORKBUDDY SKILLS</div>
+      <h3 data-i18n="wb_t">WorkBuddy Skills（中英）</h3>
+      <div class="sub" data-i18n="wb_s">本地已装，导入 zip 即用</div>
+      <ul>
+        <li data-i18n="wb_1">4 个亚马逊工具 Skill 已就绪</li>
+        <li data-i18n="wb_2">导入 zip → 在 WorkBuddy 里直接使用</li>
+        <li data-i18n="wb_3">覆盖写作 / 合规 / 标题 / 五点</li>
+        <li data-i18n="wb_4">市场发布入口开放后自动上架</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cta-strip">
+    <h2 data-i18n="cta_h">想一次生成 8 国站点 + 深度合规扫描？</h2>
+    <p data-i18n="cta_p">免费工具帮你写出初稿；完整 SaaS 帮你多站点一键优化、规避下架风险。</p>
+    <a href="/scan" data-i18n="cta_b">免费试用完整版 →</a>
+  </div>
+
+  <footer data-i18n="foot">© ListingGood · 亚马逊 Listing，合规又好卖 · 免费工具永久开放</footer>
+</div>
+
+<script>
+const I18N = {
+  zh:{
+    eyebrow:"免费工具 · 随处可用",
+    h1:"在你常用的 AI 里，免费用 ListingGood",
+    sub:"不用切换平台。把亚马逊 Listing 写作、标题优化、合规检查装进 Claude、Cursor、ChatGPT、扣子，或 WorkBuddy —— 写一次工具，所有 AI 都能帮你出合规又好卖的 Listing。",
+    mcp_t:"MCP Server（跨平台）", mcp_s:"Claude Desktop · Cursor · VS Code · Windsurf · Cline",
+    mcp_1:"4 个工具：生成 Listing / 优化标题 / 写五点 / 合规审计",
+    mcp_2:"本地运行，无需 API key、无网络调用",
+    mcp_3:"pip install listinggood-mcp", mcp_4:"配置 mcpServers 后重启客户端即生效",
+    gpt_t:"GPTs Store（英文）", gpt_s:"全球最大 AI 用户群，公开可搜索",
+    gpt_1:"搜索 \"ListingGood Amazon Optimizer\" 一键安装", gpt_2:"在 ChatGPT 里直接生成合规 Listing",
+    gpt_3:"免费使用，输出末尾引导到完整 SaaS", gpt_4:"需 ChatGPT Plus/Pro 账号发布",
+    coze_t:"Coze 扣子 Bot（中文）", coze_s:"中国跨境卖家最活跃的 AI 平台",
+    coze_1:"中文「亚马逊 Listing 优化助手」公开 Bot", coze_2:"零代码搭建，支持工作流与知识库",
+    coze_3:"在扣子里直接生成中文 Listing 文案", coze_4:"发布后中文卖家搜索即可用",
+    wb_t:"WorkBuddy Skills（中英）", wb_s:"本地已装，导入 zip 即用",
+    wb_1:"4 个亚马逊工具 Skill 已就绪", wb_2:"导入 zip → 在 WorkBuddy 里直接使用",
+    wb_3:"覆盖写作 / 合规 / 标题 / 五点", wb_4:"市场发布入口开放后自动上架",
+    cta_h:"想一次生成 8 国站点 + 深度合规扫描？", cta_p:"免费工具帮你写出初稿；完整 SaaS 帮你多站点一键优化、规避下架风险。",
+    cta_b:"免费试用完整版 →", foot:"© ListingGood · 亚马逊 Listing，合规又好卖 · 免费工具永久开放"
+  },
+  en:{
+    eyebrow:"Free tools · everywhere",
+    h1:"Use ListingGood inside the AI you already use",
+    sub:"No platform switching. Install Amazon listing writing, title optimization, and compliance checks into Claude, Cursor, ChatGPT, Coze, or WorkBuddy — write the tool once, every AI helps you ship compliant, sellable listings.",
+    mcp_t:"MCP Server (cross-platform)", mcp_s:"Claude Desktop · Cursor · VS Code · Windsurf · Cline",
+    mcp_1:"4 tools: generate listing / optimize title / write bullets / compliance audit",
+    mcp_2:"Runs locally — no API key, no network calls",
+    mcp_3:"pip install listinggood-mcp", mcp_4:"Add to mcpServers, restart client, done",
+    gpt_t:"GPTs Store (English)", gpt_s:"World's largest AI user base, publicly searchable",
+    gpt_1:"Search \"ListingGood Amazon Optimizer\" and install", gpt_2:"Generate compliant listings right in ChatGPT",
+    gpt_3:"Free to use; output points to the full SaaS", gpt_4:"Needs a ChatGPT Plus/Pro account to publish",
+    coze_t:"Coze Bot (中文)", coze_s:"China's most active AI platform for cross-border sellers",
+    coze_1:"Chinese \"亚马逊 Listing 优化助手\" public Bot", coze_2:"No-code build, workflows + knowledge base",
+    coze_3:"Generate Chinese listing copy directly in Coze", coze_4:"Searchable by Chinese sellers after publish",
+    wb_t:"WorkBuddy Skills (中英)", wb_s:"Installed locally, import zip to use",
+    wb_1:"4 Amazon tool skills ready", wb_2:"Import zip → use inside WorkBuddy",
+    wb_3:"Covers writing / compliance / title / bullets", wb_4:"Auto-listed when marketplace opens",
+    cta_h:"Want 8-marketplace generation + deep compliance scan?", cta_p:"Free tools draft it; the full SaaS optimizes across marketplaces and avoids takedowns.",
+    cta_b:"Try the full version free →", foot:"© ListingGood · Compliant, sellable Amazon listings · free tools stay free"
+  }
+};
+function setLang(l){
+  localStorage.setItem('lang', l);
+  document.documentElement.lang = (l==='zh'?'zh-CN':'en');
+  const d = I18N[l];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{ const k=el.getAttribute('data-i18n'); if(d[k]) el.textContent=d[k]; });
+  document.getElementById('btnZh').classList.toggle('active', l==='zh');
+  document.getElementById('btnEn').classList.toggle('active', l==='en');
+}
+(function(){ const l = localStorage.getItem('lang')||'zh'; setLang(l); })();
+</script>
+</body>
+</html>
