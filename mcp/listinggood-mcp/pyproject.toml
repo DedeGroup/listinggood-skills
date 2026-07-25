@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "listinggood-mcp"
+version = "0.1.0"
+description = "Free Amazon listing tools (generate / optimize / compliance) as an MCP server for Claude, Cursor, VS Code, and any MCP client."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "ListingGood" }]
+keywords = ["amazon", "listing", "mcp", "ecommerce", "seo", "compliance", "sellers"]
+dependencies = [
+    "mcp>=1.2.0",
+]
+
+[project.urls]
+Homepage = "https://www.listinggood.com"
+Repository = "https://github.com/ryanyang828/listinggood-tools"
+
+[project.scripts]
+listinggood-mcp = "listinggood_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/listinggood_mcp"]
