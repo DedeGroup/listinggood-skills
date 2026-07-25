@@ -4,12 +4,14 @@
   "groupings": [
     {
       "title": "Amazon Listing Tools",
-      "description": "Free, local, no-API-key skills to write, optimize, and compliance-check Amazon listings.",
+      "description": "Free, local, no-API-key skills to write, optimize, compliance-check, and protect Amazon listings — including account-suspension risk and EU (DE/ES/FR/IT) localization.",
       "skills": [
         "listinggood-amazon-listing-writer",
         "listinggood-amazon-title-optimizer",
         "listinggood-amazon-bullet-generator",
-        "listinggood-amazon-compliance-checker"
+        "listinggood-amazon-compliance-checker",
+        "listinggood-amazon-suspension-shield",
+        "listinggood-amazon-eu-localization"
       ]
     }
   ]
