@@ -22,15 +22,14 @@ deep compliance scan).
 
 ## Install
 
-```bash
-pip install listinggood-mcp
-```
-
-Or run directly with `uvx` (no install):
+Install straight from the public GitHub repo (no PyPI account needed):
 
 ```bash
-uvx listinggood-mcp
+pip install "git+https://github.com/ryanyang828/listinggood-skills.git#subdirectory=mcp/listinggood-mcp"
 ```
+
+This drops the `listinggood-mcp` command onto your PATH. (PyPI publish is planned;
+until then, use the git install above — it always points at the latest source.)
 
 ## Connect to your client
 
@@ -82,7 +81,9 @@ Restart Claude Desktop. The four tools appear automatically.
 - "Optimize this title for Amazon US: `Winter Coat Women Long Warm Jacket`."
 - "Audit this Amazon listing for compliance issues: <paste text>."
 
-## Publish to the MCP registry
+## Publish to the MCP registry (optional)
+
+The package can also be published to PyPI for a one-command `pip install listinggood-mcp`:
 
 ```bash
 pip install build twine
@@ -91,7 +92,7 @@ twine upload dist/*
 ```
 
 Then submit the package to https://registry.modelcontextprotocol.io so it shows
-up in every client's one-click installer.
+up in every client's one-click installer. Until then, use the git install above.
 
 ## License
 
