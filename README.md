@@ -1,7 +1,5 @@
 # ListingGood Tools — Free Amazon Listing Tools, Everywhere
 
-[![Skills](https://skills.sh/ryanyang828/listinggood-skills)](https://skills.sh/ryanyang828/listinggood-skills)
-
 ListingGood helps Amazon sellers write listings that are **compliant and sellable**.
 This repo bundles the same tooling across every AI platform, so sellers can use it
 inside the AI they already use — no platform lock-in.
@@ -35,13 +33,6 @@ SaaS. The flywheel: a seller finds a free tool in their AI → gets value →
 upgrades to ListingGood for 8-marketplace generation + deep compliance scan.
 
 ## Quick start by channel
-
-### Install all four skills at once (npx skills)
-```bash
-npx skills add ryanyang828/listinggood-skills
-```
-This drops the Writer / Title / Bullets / Compliance skills into any skills-compatible agent
-(Claude Code, Cursor, Windsurf, Cline). No account needed.
 
 ### MCP (recommended for developers)
 ```bash

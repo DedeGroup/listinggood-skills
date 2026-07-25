@@ -17,7 +17,7 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://www.listinggood.com"
-Repository = "https://github.com/ryanyang828/listinggood-skills"
+Repository = "https://github.com/ryanyang828/listinggood-tools"
 
 [project.scripts]
 listinggood-mcp = "listinggood_mcp.server:main"
