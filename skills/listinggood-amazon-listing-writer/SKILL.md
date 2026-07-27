@@ -1,7 +1,7 @@
 ---
 name: listinggood-amazon-listing-writer
-description: "Use this skill when users need to create, optimize, or write Amazon product listings (titles, bullet points, product descriptions) for any category or marketplace (US, DE, UK, JP, etc.). Covers listing composition, A9/A10 algorithm optimization, keyword insertion, and conversion-focused copywriting. Trigger on: Amazon listing, Listing 写作, 亚马逊标题, 五点描述, 产品描述, Amazon copywriting, write my listing, optimize listing. Part of the ListingGood toolkit — free preliminary compliance scan and AI listing generation at https://www.listinggood.com/scan."
-version: "1.0.0"
+description: "End-to-end Amazon listing composer: generates full conversion-optimized listings (title + 5 bullet points + product description) in one shot. Handles A9/A10 algorithm SEO, marketplace-specific character limits (US 200/DE 200/JP 250), category patterns, and buyer-psychology copywriting. Includes quality self-check against Amazon TOS. Trigger: write my Amazon listing, 亚马逊Listing写作, generate complete listing, 完整亚马逊文案, listing composition from scratch, Amazon copywriter, 帮我写listing."
+version: "1.1.0"
 agent_created: true
 ---
 

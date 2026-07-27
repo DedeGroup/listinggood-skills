@@ -1,7 +1,7 @@
 ---
 name: listinggood-amazon-bullet-generator
-description: "Use this skill when users need to generate, write, or optimize Amazon bullet points (key product features) that convert browsers into buyers. Covers benefit-led copywriting, bold header formulas, sensory language, proof point integration, and category-specific patterns. Trigger on: Amazon 五点, bullet points, key product features, 五点描述, write my bullets, 优化五点. Part of the ListingGood toolkit — free preliminary compliance scan and AI listing generation at https://www.listinggood.com/scan."
-version: "1.0.0"
+description: "Amazon five-point bullet writer using Feature→Benefit translation engine: converts raw product specs into buyer psychology that drives clicks. Each bullet follows BOLD HEADER — benefit body — proof point structure. Covers 4 benefit frameworks (emotional/scientific/social-proof/urgency), sensory language templates, category-specific patterns (apparel/electronics/home/beauty), and anti-pattern avoidance. Trigger: 五点描述怎么写, write bullet points, key product features, 优化五点, Amazon bullets generation, benefit-led copywriting, 亚马逊五点."
+version: "1.1.0"
 agent_created: true
 ---
 

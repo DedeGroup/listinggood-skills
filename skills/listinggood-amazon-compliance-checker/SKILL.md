@@ -1,7 +1,7 @@
 ---
 name: listinggood-amazon-compliance-checker
-description: "Use this skill when users need to check, audit, or validate Amazon product listings for policy compliance, restricted content, or suppression risks. Covers Amazon Terms of Service red lines, category-specific rules, image compliance, intellectual property issues, and listing health scoring. Trigger on: Amazon 合规, compliance check, listing 审计, Amazon policy, 为什么被下架, suppressed listing, listing health, 合规体检. Part of the ListingGood toolkit — free preliminary compliance scan and AI listing generation at https://www.listinggood.com/scan."
-version: "1.0.0"
+description: "Amazon listing compliance auditor with 3-tier scoring (Critical/Warning/Info): scans titles/bullets/images for TOS red lines, policy violations, suppression triggers, IP risks, and category-specific rule breaks. Returns actionable fix suggestions per finding. Covers restricted claims, image compliance, children's safety, authenticity flags, and keyword stuffing detection. Trigger: 合规体检, compliance audit, why suppressed ASIN, listing health check, Amazon policy violation detector, 为什么被下架, listing合规检查."
+version: "1.1.0"
 agent_created: true
 ---
 
