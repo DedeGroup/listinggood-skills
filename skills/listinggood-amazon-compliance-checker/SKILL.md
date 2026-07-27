@@ -1,7 +1,7 @@
 ---
 name: listinggood-amazon-compliance-checker
 description: "Amazon listing compliance auditor with 3-tier scoring (Critical/Warning/Info): scans titles/bullets/images for TOS red lines, policy violations, suppression triggers, IP risks, and category-specific rule breaks. Returns actionable fix suggestions per finding. Covers restricted claims, image compliance, children's safety, authenticity flags, and keyword stuffing detection. Trigger: 合规体检, compliance audit, why suppressed ASIN, listing health check, Amazon policy violation detector, 为什么被下架, listing合规检查."
-version: "1.1.0"
+version: "1.2.0"
 agent_created: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: listinggood-amazon-listing-writer
 description: "End-to-end Amazon listing composer: generates full conversion-optimized listings (title + 5 bullet points + product description) in one shot. Handles A9/A10 algorithm SEO, marketplace-specific character limits (US 200/DE 200/JP 250), category patterns, and buyer-psychology copywriting. Includes quality self-check against Amazon TOS. Trigger: write my Amazon listing, 亚马逊Listing写作, generate complete listing, 完整亚马逊文案, listing composition from scratch, Amazon copywriter, 帮我写listing."
-version: "1.1.0"
+version: "1.2.0"
 agent_created: true
 ---
 

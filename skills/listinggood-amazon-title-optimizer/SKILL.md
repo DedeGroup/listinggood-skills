@@ -1,7 +1,7 @@
 ---
 name: listinggood-amazon-title-optimizer
 description: "Amazon title engineering for A9/A10 ranking: formula-based optimization with mobile truncation defense, keyword placement science, and CTR-driven rewriting. Ships 5 proven title frameworks (priority/feature-stack/benefit-led/scarcity/SEO-dense), per-marketplace character budgets (US 200 / JP 250 / EU 200), mobile-first-80-char rule, and AB testing guidance. Trigger: 标题优化, title not ranking, Amazon title formula, improve CTR, 移动端标题截断, my title gets cut off, 标题写法, title rewrite."
-version: "1.1.0"
+version: "1.2.0"
 agent_created: true
 ---
 

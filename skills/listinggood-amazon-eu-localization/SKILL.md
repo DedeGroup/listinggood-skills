@@ -1,7 +1,7 @@
 ---
 name: listinggood-amazon-eu-localization
-description: "Use this skill when sellers need to localize Amazon listings for the EU marketplaces DE (Germany), ES (Spain), FR (France), IT (Italy) — not just translate. Covers native-language requirements, per-marketplace keyword differences, character/title limits, mandatory EU compliance markings (CE, 欧代/EU Responsible Person per GPSR, WEEE, battery, textile fiber label EU 1007/2011), sizing/localization expectations, A9 search-behavior differences, and VAT/price display. Built from operating Alexis Leroy, a live EU apparel/footwear brand across DE/ES/FR/IT. Trigger on: 欧洲站, Amazon 德国, Amazon 法国, Amazon 西班牙, Amazon 意大利, EU listing, 本地化, 欧代, GPSR, CE 标识, 德语标题, 法语描述, textile label, 纺织标签. Part of the ListingGood toolkit — free preliminary compliance scan at https://www.listinggood.com/scan."
-version: "1.0.0"
+description: "EU marketplace localization engine for Amazon DE/ES/FR/IT: not just translate — adapts listings to native buyer expectations per country. Covers mandatory EU markings (CE, 欧代/GPSR Responsible Person, WEEE, battery, textile fiber label EU 1007/2011), per-marketplace character limits, sizing conventions, A9 search-behavior differences, VAT display rules, and native keyword usage. Built from operating Alexis Leroy, a live EU apparel/footwear brand across DE/ES/FR/IT since 2019. Trigger on: 欧洲站, Amazon 德国, Amazon 法国, Amazon 西班牙, Amazon 意大利, EU listing, 本地化, 欧代, GPSR, CE 标识, 德语标题, 法语描述, textile label, 纺织标签."
+version: "1.2.0"
 agent_created: true
 ---
 
