@@ -1,0 +1,8 @@
+{
+  "name": "listinggood",
+  "description": "ListingGood MCP server — 深度合规体检 / POA 申诉 / 差评分析 / 免费初检，调用 ListingGood 真实后端",
+  "transport": "stdio",
+  "command": "python",
+  "args": ["mcp_server.py"],
+  "env": ["LISTINGGOOD_API_KEY"]
+}
