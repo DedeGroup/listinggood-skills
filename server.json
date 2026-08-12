@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.ryanyang828/listinggood",
+  "title": "ListingGood MCP",
+  "description": "ListingGood — get recommended by Amazon's AI. A hosted MCP server that makes your Amazon listings readable and recommendable by Amazon's AI shopping agents. Tools: AI recommendation-readiness check, compliance pre-check, deep compliance scan, POA appeal writer, negative-review analyzer, one-sentence listing builder, and multi-marketplace listing generator. Pay-as-you-go with ListingGood stars (free tier included, new users get 10 stars).",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanyang828/listinggood-skills"
+  },
+  "homepage": "https://listinggood.com/developers",
+  "author": {
+    "name": "Ryan Yang",
+    "url": "https://listinggood.com"
+  },
+  "license": "MIT",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://listinggood.com/mcp"
+    }
+  ]
+}
