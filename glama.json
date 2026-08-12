@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "1.0",
+  "server": {
+    "name": "ListingGood MCP",
+    "description": "Get recommended by Amazon's AI. A hosted MCP server that makes your Amazon listings readable and recommendable by Amazon's AI shopping agents and ChatGPT / Gemini catalog filters.",
+    "repository": {
+      "url": "https://github.com/ryanyang828/listinggood-skills",
+      "source": "github"
+    },
+    "homepage": "https://listinggood.com/developers",
+    "types": [
+      "remote"
+    ],
+    "url": "https://listinggood.com/mcp",
+    "transport": "streamable-http",
+    "auth": {
+      "type": "apiKey",
+      "name": "apikey",
+      "location": "query"
+    },
+    "tools": [
+      {
+        "name": "ai_readiness_check",
+        "description": "Free AI recommendation readiness scan. Deterministic rule-based check on pasted Listing copy, returns compliance health + AI readability scores and suggestions (no points deducted).",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "text": { "type": "string", "description": "Listing title + bullets + description" },
+            "marketplace": { "type": "string", "default": "US", "description": "Marketplace code: US/DE/ES/FR/IT/JP/AE/SA/UK" },
+            "lang": { "type": "string", "default": "en", "description": "zh or en" },
+            "email": { "type": "string", "default": "", "description": "Optional lead email" }
+          },
+          "required": ["text"]
+        }
+      },
+      {
+        "name": "compliance_check",
+        "description": "Free compliance pre-check (API Key required, no points deducted). Quickly scans obvious red-line terms and category risks before generation.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "text": { "type": "string", "description": "Listing copy" },
+            "lang": { "type": "string", "default": "en", "description": "zh or en" },
+            "category": { "type": "string", "default": "", "description": "Optional category, e.g. electronics / apparel" }
+          },
+          "required": ["text"]
+        }
+      },
+      {
+        "name": "compliance_scan",
+        "description": "Deep compliance audit (3 stars, async). Knowledge-base driven risk report covering prohibited words, IP, category, GPSR, etc.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "text": { "type": "string", "description": "Listing title/bullets/description" },
+            "marketplace": { "type": "string", "default": "US", "description": "Marketplace code" },
+            "category": { "type": "string", "default": "", "description": "Optional category" },
+            "lang": { "type": "string", "default": "en", "description": "zh or en" },
+            "images": { "type": "array", "default": [], "description": "Optional list of data:image base64, max 5, each <4MB" }
+          },
+          "required": ["text"]
+        }
+      },
+      {
+        "name": "generate_poa",
+        "description": "Generate a Plan of Action (10 stars, async) for Amazon appeals.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "issue": { "type": "string", "description": "The violation / issue" },
+            "asin": { "type": "string", "default": "", "description": "Optional ASIN" },
+            "marketplace": { "type": "string", "default": "US", "description": "Marketplace code" },
+            "lang": { "type": "string", "default": "en", "description": "zh or en" }
+          },
+          "required": ["issue"]
+        }
+      },
+      {
+        "name": "analyze_review",
+        "description": "Analyze a negative review and draft a response or POA angle (3 stars, async).",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "review": { "type": "string", "description": "Review text" },
+            "asin": { "type": "string", "default": "", "description": "Optional ASIN" },
+            "marketplace": { "type": "string", "default": "US", "description": "Marketplace code" },
+            "lang": { "type": "string", "default": "en", "description": "zh or en" }
+          },
+          "required": ["review"]
+        }
+      },
+      {
+        "name": "fill_from_sentence",
+        "description": "Free one-sentence-to-Listing hook (API Key required, no points deducted). Expand a product sentence into structured fields.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "sentence": { "type": "string", "description": "One-sentence product description" },
+            "marketplace": { "type": "string", "default": "US", "description": "Marketplace code" },
+            "lang": { "type": "string", "default": "en", "description": "zh or en" }
+          },
+          "required": ["sentence"]
+        }
+      },
+      {
+        "name": "generate_listing",
+        "description": "Generate high-converting Amazon Listing (1 star per marketplace, async). Title + bullets + description, respects per-marketplace char limits and A9 optimization.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "cn_name": { "type": "string", "description": "Product Chinese name (required)" },
+            "sku": { "type": "string", "description": "Product SKU (required)" },
+            "marketplaces": { "type": "array", "default": [], "description": "List of marketplace codes, defaults to all 9" },
+            "price": { "type": "string", "default": "", "description": "Optional price" },
+            "lang": { "type": "string", "default": "en", "description": "zh or en" }
+          },
+          "required": ["cn_name", "sku"]
+        }
+      }
+    ]
+  }
+}
