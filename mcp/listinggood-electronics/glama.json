@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "server": {
+    "name": "ListingGood Electronics Compliance MCP",
+    "description": "Get recommended by Amazon's AI. A free, hosted MCP server for electronics & electrical Amazon sellers — market-required marks/frameworks (CE/EMC/RoHS/WEEE/GPSR/FCC/UL...), a free compliance risk scan, and a per-SKU compliance file-package link. No API key needed.",
+    "repository": {
+      "url": "https://github.com/ryanyang828/listinggood-skills",
+      "source": "github"
+    },
+    "homepage": "https://listinggood.com/compliant",
+    "types": [
+      "remote"
+    ],
+    "url": "https://listinggood.com/mcp-electronics",
+    "transport": "streamable-http",
+    "auth": {
+      "type": "none"
+    },
+    "tools": [
+      {
+        "name": "electronics_market_requirements",
+        "description": "Return the required marks and regulation frameworks for electronics/electrical products in a target market (EU/US/UK and mapped sites like DE/FR/JP). Built-in knowledge, free, no key.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "marketplace": { "type": "string", "default": "EU", "description": "EU / US / UK or a site code like DE/FR/US/UK" },
+            "lang": { "type": "string", "default": "en", "description": "zh or en" }
+          },
+          "required": []
+        }
+      },
+      {
+        "name": "electronics_compliance_scan",
+        "description": "Free electronics compliance risk scan (no key). Deterministic rule-based check on pasted listing copy, returns risk points + passed items, plus an electronics-specific gap note. Full DoC / risk-assessment / marks checklist is generated paid at listinggood.com/compliant.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "text": { "type": "string", "description": "Listing title + bullets + description" },
+            "marketplace": { "type": "string", "default": "US", "description": "Marketplace code" },
+            "lang": { "type": "string", "default": "en", "description": "zh or en" }
+          },
+          "required": ["text"]
+        }
+      },
+      {
+        "name": "electronics_file_package",
+        "description": "Return the per-SKU compliance evidence file-package link at listinggood.com/compliant (paid, 5 checks per SKU ≈ $0.50). Includes DoC template, risk assessment, and required marks checklist. Lead-gen redirect only.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "sku": { "type": "string", "description": "Product SKU" },
+            "marketplace": { "type": "string", "default": "US", "description": "Marketplace code" },
+            "lang": { "type": "string", "default": "en", "description": "zh or en" }
+          },
+          "required": ["sku"]
+        }
+      }
+    ]
+  }
+}
