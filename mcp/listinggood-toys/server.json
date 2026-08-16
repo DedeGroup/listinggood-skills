@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ryanyang828/listinggood-toys",
+  "title": "ListingGood Toys Compliance MCP",
+  "description": "Get recommended by Amazon's AI. Free, hosted MCP server for Toys Amazon sellers: market-required marks/frameworks, a free compliance risk scan, and a per-SKU compliance file-package link. No API key, no install.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/ryanyang828/listinggood-skills",
+    "source": "github"
+  },
+  "websiteUrl": "https://listinggood.com/compliant",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://listinggood.com/mcp-toys"
+    }
+  ]
+}
