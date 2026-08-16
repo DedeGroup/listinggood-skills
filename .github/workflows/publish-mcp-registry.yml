@@ -7,6 +7,9 @@ on:
       - '.github/workflows/publish-mcp-registry.yml'
       - 'server.json'
       - 'mcp/listinggood-electronics/server.json'
+      - 'mcp/listinggood-toys/server.json'
+      - 'mcp/listinggood-beauty/server.json'
+      - 'mcp/listinggood-furniture/server.json'
   workflow_dispatch:
 
 permissions:
@@ -29,8 +32,10 @@ jobs:
       - name: Publish to MCP Registry
         run: |
           ./mcp-publisher login github-oidc
-          # Both servers are already published; republishing the same version
-          # fails with "duplicate version". Tolerate that so the run stays green.
-          # When you change a server.json, bump its "version" field first.
+          # Republishing the same version fails with "duplicate version"; tolerate
+          # that so the run stays green. Bump a server.json's "version" to re-publish.
           ./mcp-publisher publish --file server.json || echo "root: skip (already published / duplicate version)"
           ./mcp-publisher publish --file mcp/listinggood-electronics/server.json || echo "electronics: skip (already published / duplicate version)"
+          ./mcp-publisher publish --file mcp/listinggood-toys/server.json || echo "toys: skip (already published / duplicate version)"
+          ./mcp-publisher publish --file mcp/listinggood-beauty/server.json || echo "beauty: skip (already published / duplicate version)"
+          ./mcp-publisher publish --file mcp/listinggood-furniture/server.json || echo "furniture: skip (already published / duplicate version)"
