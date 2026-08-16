@@ -1,0 +1,15 @@
+# Smithery listing metadata for ListingGood Electronics Compliance MCP
+# Re-register with: npx @smithery/cli@latest register .  (logged into Smithery)
+name: listinggood-electronics-mcp
+displayName: ListingGood Electronics Compliance MCP
+description: >-
+  Get recommended by Amazon's AI. A free, hosted MCP server for electronics &
+  electrical Amazon sellers. 3 tools: market-required marks/frameworks
+  (CE/EMC/RoHS/WEEE/GPSR/FCC/UL...), a free compliance risk scan, and a
+  per-SKU compliance file-package link. No API key, no install — connect
+  with a URL.
+homepage: https://listinggood.com/compliant
+repository: https://github.com/ryanyang828/listinggood-skills
+connect:
+  type: streamable-http
+  url: https://listinggood.com/mcp-electronics
