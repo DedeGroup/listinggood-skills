@@ -1,0 +1,16 @@
+# Smithery listing metadata for ListingGood MCP
+# Re-register with: npx @smithery/cli@latest register .  (logged into Smithery)
+name: listinggood-mcp
+displayName: ListingGood MCP
+description: >-
+  Get recommended by Amazon's AI. ListingGood is a hosted MCP server that makes
+  your Amazon listings readable and recommendable by Amazon's AI shopping agents
+  and ChatGPT / Gemini catalog filters. 7 tools: AI readiness check, compliance
+  pre-check, deep compliance audit, POA appeals, review analysis, one-sentence
+  listing builder, and high-converting listing generation. Zero install — connect
+  with a URL and your API key.
+homepage: https://listinggood.com/developers
+repository: https://github.com/ryanyang828/listinggood-skills
+connect:
+  type: streamable-http
+  url: https://listinggood.com/mcp?apikey=YOUR_LISTINGGOOD_API_KEY
