@@ -1,0 +1,11 @@
+# Smithery listing metadata for ListingGood Toys Compliance MCP
+# Re-register with: npx @smithery/cli@latest register .  (logged into Smithery)
+name: listinggood-toys-mcp
+displayName: ListingGood Toys Compliance MCP
+description: >-
+  Get recommended by Amazon's AI. A free, hosted MCP server for Toys & related Amazon sellers — market-required marks/frameworks (CE/FCC/UKCA/REACH/Prop 65/GPSR...), a free compliance risk scan, and a per-SKU compliance file-package link. No API key needed.
+homepage: https://listinggood.com/compliant
+repository: https://github.com/ryanyang828/listinggood-skills
+connect:
+  type: streamable-http
+  url: https://listinggood.com/mcp-toys
