@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/publish-mcp-registry.yml'
       - 'server.json'
+      - 'mcp/listinggood-electronics/server.json'
   workflow_dispatch:
 
 permissions:
@@ -29,3 +30,4 @@ jobs:
         run: |
           ./mcp-publisher login github-oidc
           ./mcp-publisher publish --file server.json
+          ./mcp-publisher publish --file mcp/listinggood-electronics/server.json
