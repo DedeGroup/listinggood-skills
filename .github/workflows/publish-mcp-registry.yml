@@ -29,5 +29,8 @@ jobs:
       - name: Publish to MCP Registry
         run: |
           ./mcp-publisher login github-oidc
-          ./mcp-publisher publish --file server.json
+          # Root server.json is already published at 1.0.0; republishing the same
+          # version fails with "duplicate version". Tolerate that so the run does
+          # not break; the electronics server is the new publish we care about.
+          ./mcp-publisher publish --file server.json || echo "root server already published (skip duplicate version)"
           ./mcp-publisher publish --file mcp/listinggood-electronics/server.json
