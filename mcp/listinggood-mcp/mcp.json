@@ -1,8 +1,12 @@
 {
   "name": "listinggood",
-  "description": "ListingGood MCP server — 深度合规体检 / POA 申诉 / 差评分析 / 免费初检，调用 ListingGood 真实后端",
+  "description": "Get recommended by Amazon's AI. Hosted MCP server for Amazon listing compliance, optimization, and appeals — zero install, connect with a URL and your ListingGood API key. 7 tools: AI readiness check, compliance pre-check, deep compliance audit, POA appeals, review analysis, one-sentence listing builder, and high-converting listing generation.",
   "transport": "stdio",
   "command": "python",
   "args": ["mcp_server.py"],
-  "env": ["LISTINGGOOD_API_KEY"]
+  "env": ["LISTINGGOOD_API_KEY"],
+  "remote": {
+    "type": "streamable-http",
+    "url": "https://listinggood.com/mcp?apikey=YOUR_LISTINGGOOD_API_KEY"
+  }
 }
