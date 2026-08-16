@@ -1,0 +1,13 @@
+{
+  "name": "listinggood-toys",
+  "description": "Get recommended by Amazon's AI. Free, hosted MCP server for Toys Amazon sellers: market-required marks/frameworks, a free compliance risk scan, and a per-SKU compliance file-package link. No API key, no install.",
+  "transport": "stdio",
+  "command": "python",
+  "args": [
+    "mcp_toys.py"
+  ],
+  "remote": {
+    "type": "streamable-http",
+    "url": "https://listinggood.com/mcp-toys"
+  }
+}
