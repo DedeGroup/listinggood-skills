@@ -3,7 +3,7 @@
   "name": "io.github.ryanyang828/listinggood-electronics",
   "title": "ListingGood Electronics Compliance MCP",
   "description": "Get recommended by Amazon's AI. Free, hosted MCP server for electronics & electrical Amazon sellers: market-required marks/frameworks (CE/EMC/RoHS/WEEE/GPSR/FCC/UL...), a free compliance risk scan, and a per-SKU compliance file-package link. No API key, no install.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "url": "https://github.com/ryanyang828/listinggood-skills",
     "source": "github"
