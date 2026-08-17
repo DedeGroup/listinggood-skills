@@ -4,7 +4,7 @@
     "name": "ListingGood MCP",
     "description": "Get recommended by Amazon's AI. A hosted MCP server that makes your Amazon listings readable and recommendable by Amazon's AI shopping agents and ChatGPT / Gemini catalog filters.",
     "repository": {
-      "url": "https://github.com/ryanyang828/listinggood-skills",
+      "url": "https://github.com/DedeGroup/listinggood-skills",
       "source": "github"
     },
     "homepage": "https://listinggood.com/developers",
