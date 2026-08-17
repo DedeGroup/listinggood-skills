@@ -38,10 +38,41 @@ This repository bundles ListingGood's **agent skills** and **MCP server** config
 ## Quick start — connect the MCP
 
 1. Get a free API key at **[listinggood.com/developers](https://listinggood.com/developers)**.
-2. Copy the one-click config for **Claude Desktop** or **Cursor** (also shown on the Developers page).
+2. Add the server to your MCP client:
+
+```json
+{
+  "mcpServers": {
+    "listinggood": {
+      "url": "https://listinggood.com/mcp",
+      "transport": "streamable-http",
+      "headers": {
+        "Authorization": "Bearer <YOUR_API_KEY>"
+      }
+    }
+  }
+}
+```
+
 3. Restart your client. ListingGood's tools appear as available MCP tools.
 
 > The MCP endpoint is `https://listinggood.com/mcp` (API key from your dashboard). No local install required.
+
+## Tools
+
+The MCP server exposes the following tools:
+
+| Tool | What it does | Cost |
+|---|---|---|
+| `ai_readiness_check` | Free AI recommendation-readiness scan on pasted listing text (compliance + readability scores) | Free, no API key required |
+| `compliance_check` | Fast red-line word and category-risk scan before generation | Free with API key |
+| `compliance_scan` | Deep knowledge-base compliance audit (prohibited words, IP, category, GPSR, image support) | 3 credits |
+| `generate_listing` | Generate optimized title + bullets + description for selected marketplaces | 1 credit per marketplace |
+| `fill_from_sentence` | Turn a one-sentence product description into structured listing fields | Free with API key |
+| `generate_poa` | Draft an appeal Plan of Action from an Amazon violation notice | 10 credits |
+| `analyze_review` | Analyze a negative review for root cause and suggested response | 3 credits |
+
+All paid tools return a task ID and poll until completion. The free `ai_readiness_check` returns results immediately.
 
 ## Try it now (no account)
 
