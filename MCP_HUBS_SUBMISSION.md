@@ -14,7 +14,7 @@
 - **Transport**：streamable-http ｜ **Auth**：API Key（query 参数 `apikey`）
 - **获取 Key**：https://listinggood.com/api/user/apikey（新用户送 10 星入永久钱包）
 - **差异化卖点**：不需要 `pip` / `uvx` 安装、不需要本地跑 Python。Claude / Cursor / 任意支持 MCP 的 AI 客户端，配一个 URL + Key 就能原生调用。
-- **仓库**：https://github.com/ryanyang828/listinggood-skills
+- **仓库**：https://github.com/DedeGroup/listinggood-skills
 - **官网 / Developers**：https://listinggood.com/developers
 
 ---
@@ -25,7 +25,7 @@
 |------|------|----------|-------------|
 | **Glama** | ✅ live | `glama.json`（仓库根，Glama 自动同步） | 已收录 |
 | **Smithery** | ✅ live（待优化）| 用户 `yangqi0828` 账号注册 | 缺 description / 评分 35/100 → 见 §4 |
-| **官方 MCP Registry** | ✅ live | `server.json` + GitHub Actions `publish-mcp-registry.yml`（push 自动发布） | `io.github.ryanyang828/listinggood`，8/12 active，streamable-http |
+| **官方 MCP Registry** | ✅ live | `server.json` + GitHub Actions `publish-mcp-registry.yml`（push 自动发布） | `io.github.DedeGroup/listinggood`，8/12 active，streamable-http |
 | **MCP Market** | ✅ live | 已提交 | mcpmarket.com/zh/server/listinggood |
 | **UIComet** | ✅ live | 已提交 | Google 可搜到 |
 | **mcpservers.org** | ✅ 已提交 | 开放表单（本会话 8/16 提交，12h 审核） | 无需登录 |
@@ -45,7 +45,7 @@
   `Get recommended by Amazon's AI. ListingGood is a hosted MCP server that makes your Amazon listings readable and recommendable by Amazon's AI shopping agents and ChatGPT / Gemini catalog filters. It exposes 7 tools — AI readiness check, compliance pre-check, deep compliance audit, POA appeals, review analysis, one-sentence listing builder, and high-converting listing generation — over a single streamable-HTTP endpoint. No pip install, no local Python: just paste the URL with your API key into Claude Desktop, Cursor, or any MCP client. Free tier included; points deducted only for deep scans / generation.`
 - **Category**：E-commerce / Developer Tools / Marketing
 - **Tags**：`amazon`, `mcp`, `listing`, `compliance`, `ai-agent`, `ecommerce`, `claude`, `cursor`
-- **Repository**：https://github.com/ryanyang828/listinggood-skills
+- **Repository**：https://github.com/DedeGroup/listinggood-skills
 - **Homepage**：https://listinggood.com/developers
 - **Endpoint**：`https://listinggood.com/mcp?apikey=YOUR_LISTINGGOOD_API_KEY`
 - **Client config（Claude Desktop / Cursor）**：
