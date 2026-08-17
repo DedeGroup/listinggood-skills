@@ -1,11 +1,11 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.ryanyang828/listinggood",
+  "name": "io.github.DedeGroup/listinggood",
   "title": "ListingGood MCP",
   "description": "Get recommended by Amazon's AI. Hosted MCP server for Amazon listing compliance & generation.",
   "version": "1.0.0",
   "repository": {
-    "url": "https://github.com/ryanyang828/listinggood-skills",
+    "url": "https://github.com/DedeGroup/listinggood-skills",
     "source": "github"
   },
   "websiteUrl": "https://listinggood.com/developers",
