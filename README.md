@@ -1,57 +1,58 @@
-# ListingGood MCP
+# ListingGood — AI Recommendation Engine (Skills + MCP)
 
-**Get recommended by Amazon's AI.**
+> **Make AI recommend your products.** ListingGood is the engine that helps Amazon's AI — Alexa for Shopping, the COSMO intent model, and agentic auto-buy — find, trust, and recommend your listings. It does this through three things: **compliance**, **AI writing**, and **appeal rescue**.
 
-ListingGood is an AI Recommendation Engine for Amazon sellers. As Amazon's shopping agents (and ChatGPT / Gemini's catalog filters) begin deciding what gets recommended, the winning products are the ones those agents can read and trust. **ListingGood's hosted MCP server plugs that capability straight into your AI assistant** — zero install, just a URL and your API key.
+[![Website](https://img.shields.io/badge/website-listinggood.com-blue)](https://listinggood.com) [![MCP](https://img.shields.io/badge/MCP-server-green)](https://listinggood.com/developers) [![Free check](https://img.shields.io/badge/free%20check-no%20login-success)](https://listinggood.com/scan)
 
-## What it does
+---
 
-7 tools that make your listings compliant, readable, and recommendable:
+## Why this exists
 
-| Tool | Stars | What it does |
-|------|-------|--------------|
-| `ai_readiness_check` | Free | AI recommendation readiness scan — compliance health + AI readability scores |
-| `compliance_check` | Free | Quick compliance pre-check before generation |
-| `compliance_scan` | 3 ⭐ | Deep knowledge-base driven audit (prohibited words, IP, category, GPSR) |
-| `generate_poa` | 10 ⭐ | Plan of Action for Amazon appeals |
-| `analyze_review` | 3 ⭐ | Negative-review analysis + response draft |
-| `fill_from_sentence` | Free | One-sentence → structured Listing fields |
-| `generate_listing` | 1 ⭐/marketplace | High-converting Listing (title + bullets + description, A9 optimized) |
+Amazon's discovery front-door has moved to AI. A listing that is **not machine-readable and compliance-clean** is far less likely to be cited inside Alexa for Shopping, COSMO answers, or agentic buying flows. Traditional seller tools tell you *what to sell* — they don't tell you whether your listing will be *recommended*.
 
-## Connect (remote, no install)
+ListingGood closes that gap:
 
-```
-https://listinggood.com/mcp?apikey=YOUR_LISTINGGOOD_API_KEY
-```
+- **Compliance pre-check** — flags risky claims and category issues *before* you publish (free, no login).
+- **AI readability** — scores how well Amazon's AI surfaces can parse and cite your listing.
+- **AI writing** — generates compliant titles, bullets, and descriptions.
+- **Appeal rescue** — drafts a Plan of Action (POA) when a listing is suppressed.
 
-- **Transport**: Streamable HTTP
-- **Auth**: API Key in the `apikey` query parameter
-- Get your key at **https://listinggood.com/api/user/apikey** (new users get 10 free stars)
+The combined result is an **AI Recommendation Readiness Score** = compliance × 0.55 + AI readability × 0.45.
 
-### Claude Desktop / Cursor config
+## What's in this repo
 
-```json
-{
-  "mcpServers": {
-    "listinggood": {
-      "url": "https://listinggood.com/mcp?apikey=YOUR_LISTINGGOOD_API_KEY"
-    }
-  }
-}
-```
+This repository bundles ListingGood's **agent skills** and **MCP server** config so AI agents and power users can call ListingGood programmatically:
 
-## Listed on
+| Package | What it does |
+|---|---|
+| `listinggood-expert` | All-in-one Amazon listing expert: write · compliance pre-check · appeal rescue |
+| `listinggood-amazon-listing-optimizer` | High-conversion listing generation (title + bullets + description) |
+| `listinggood-amazon-compliance-auditor` | Compliance audit with Critical/Warning/Info grading |
+| `listinggood-deep-compliance` | Deep, knowledge-base-backed compliance report |
+| `listinggood-appeal-rescue` | POA drafting + negative-review root-cause analysis |
+| `listinggood-amazon-title-optimizer` | A9/A10 title optimization |
+| `listinggood-amazon-bullet-writer` | Benefit-led bullet points |
+| `listinggood-amazon-eu-localization` | EU marketplace (DE/ES/FR/IT) localization |
+| **MCP server** | 7 tools (free check, deep scan, AI generation, POA, …) + vertical MCPs (Electronics / Toys / Beauty / Home) |
 
-- [Smithery](https://smithery.ai/server/@yangqi0828/listinggood-mcp)
-- [mcp.so](https://mcp.so/server/listinggood-amazon-listing-tools) (remote, under review)
-- Glama · PulseMCP · Official MCP Registry (coming)
+## Quick start — connect the MCP
+
+1. Get a free API key at **[listinggood.com/developers](https://listinggood.com/developers)**.
+2. Copy the one-click config for **Claude Desktop** or **Cursor** (also shown on the Developers page).
+3. Restart your client. ListingGood's tools appear as available MCP tools.
+
+> The MCP endpoint is `https://listinggood.com/mcp` (API key from your dashboard). No local install required.
+
+## Try it now (no account)
+
+Run a free compliance + AI-readability check at **[listinggood.com/scan](https://listinggood.com/scan)** — paste your title and bullets, get a report in seconds.
 
 ## Links
 
-- Website: https://listinggood.com
-- Developers: https://listinggood.com/developers
-- API key: https://listinggood.com/api/user/apikey
+- Website & free check: https://listinggood.com
+- Developers / MCP config: https://listinggood.com/developers
+- Changelog: https://listinggood.com/changelog
 
-## License
+---
 
-MIT
+*ListingGood AI Recommendation Engine — make AI recommend your products.*
