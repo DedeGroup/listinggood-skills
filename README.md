@@ -66,11 +66,11 @@ The MCP server exposes the following tools:
 |---|---|---|
 | `ai_readiness_check` | Free AI recommendation-readiness scan on pasted listing text (compliance + readability scores) | Free, no API key required |
 | `compliance_check` | Fast red-line word and category-risk scan before generation | Free with API key |
-| `compliance_scan` | Deep knowledge-base compliance audit (prohibited words, IP, category, GPSR, image support) | 3 credits |
+| `compliance_scan` | Deep knowledge-base compliance audit (prohibited words, IP, category, GPSR, image support) | 2 credits |
 | `generate_listing` | Generate optimized title + bullets + description for selected marketplaces | 1 credit per marketplace |
 | `fill_from_sentence` | Turn a one-sentence product description into structured listing fields | Free with API key |
-| `generate_poa` | Draft an appeal Plan of Action from an Amazon violation notice | 10 credits |
-| `analyze_review` | Analyze a negative review for root cause and suggested response | 3 credits |
+| `generate_poa` | Draft an appeal Plan of Action from an Amazon violation notice | 4 credits |
+| `analyze_review` | Analyze a negative review for root cause and suggested response | 2 credits |
 
 All paid tools return a task ID and poll until completion. The free `ai_readiness_check` returns results immediately.
 
