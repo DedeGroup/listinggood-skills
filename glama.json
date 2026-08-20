@@ -48,7 +48,7 @@
       },
       {
         "name": "compliance_scan",
-        "description": "Deep compliance audit (3 stars, async). Knowledge-base driven risk report covering prohibited words, IP, category, GPSR, etc.",
+        "description": "Deep compliance audit (2 stars, async). Knowledge-base driven risk report covering prohibited words, IP, category, GPSR, etc.",
         "inputSchema": {
           "type": "object",
           "properties": {
@@ -63,7 +63,7 @@
       },
       {
         "name": "generate_poa",
-        "description": "Generate a Plan of Action (10 stars, async) for Amazon appeals.",
+        "description": "Generate a Plan of Action (4 stars, async) for Amazon appeals.",
         "inputSchema": {
           "type": "object",
           "properties": {
@@ -77,7 +77,7 @@
       },
       {
         "name": "analyze_review",
-        "description": "Analyze a negative review and draft a response or POA angle (3 stars, async).",
+        "description": "Analyze a negative review and draft a response or POA angle (2 stars, async).",
         "inputSchema": {
           "type": "object",
           "properties": {
