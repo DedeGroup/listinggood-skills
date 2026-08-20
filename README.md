@@ -64,13 +64,15 @@ The MCP server exposes the following tools:
 
 | Tool | What it does | Cost |
 |---|---|---|
-| `ai_readiness_check` | Free AI recommendation-readiness scan on pasted listing text (compliance + readability scores) | Free, no API key required |
-| `compliance_check` | Fast red-line word and category-risk scan before generation | Free with API key |
-| `compliance_scan` | Deep knowledge-base compliance audit (prohibited words, IP, category, GPSR, image support) | 2 credits |
+| `ai_readiness_check` | **Score** — the only tool returning a combined AI-recommendation-readiness number (compliance ×0.55 + readability ×0.45), instant | Free, no API key |
+| `compliance_check` | **Quick gate** — fast red-line-word + category-risk scan before you write; shallow and instant, not a full audit | Free with API key |
+| `compliance_scan` | **Deep report** — knowledge-base-driven full compliance audit (prohibited words, IP, category, GPSR, image support); a written report, not a quick check | 2 credits |
 | `generate_listing` | Generate optimized title + bullets + description for selected marketplaces | 1 credit per marketplace |
 | `fill_from_sentence` | Turn a one-sentence product description into structured listing fields | Free with API key |
 | `generate_poa` | Draft an appeal Plan of Action from an Amazon violation notice | 4 credits |
-| `analyze_review` | Analyze a negative review for root cause and suggested response | 2 credits |
+| `analyze_review` | Analyze a negative review for root cause and a suggested response | 2 credits |
+
+> **Three compliance tiers** — pick by depth, not by name: `ai_readiness_check` returns a *score*, `compliance_check` is a *quick pre-publish gate*, and `compliance_scan` is a *deep async written report*.
 
 All paid tools return a task ID and poll until completion. The free `ai_readiness_check` returns results immediately.
 
