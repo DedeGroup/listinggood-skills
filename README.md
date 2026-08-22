@@ -44,11 +44,8 @@ This repository bundles ListingGood's **agent skills** and **MCP server** config
 {
   "mcpServers": {
     "listinggood": {
-      "url": "https://listinggood.com/mcp",
-      "transport": "streamable-http",
-      "headers": {
-        "Authorization": "Bearer <YOUR_API_KEY>"
-      }
+      "url": "https://listinggood.com/mcp?apikey=<YOUR_API_KEY>",
+      "transport": "streamable-http"
     }
   }
 }
@@ -56,7 +53,7 @@ This repository bundles ListingGood's **agent skills** and **MCP server** config
 
 3. Restart your client. ListingGood's tools appear as available MCP tools.
 
-> The MCP endpoint is `https://listinggood.com/mcp` (API key from your dashboard). No local install required.
+> This is a **remote Streamable HTTP MCP server** — no local install, Docker build, or `npx` command is required. The API key is passed as a URL query parameter (`?apikey=...`) exactly as shown above.
 
 ## Tools
 
