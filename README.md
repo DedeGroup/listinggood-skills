@@ -1,14 +1,43 @@
 # ListingGood — AI Recommendation Engine (Skills + MCP)
 
-> **Make AI recommend your products.** ListingGood is the engine that helps Amazon's AI — Alexa for Shopping, the COSMO intent model, and agentic auto-buy — find, trust, and recommend your listings. It does this through three things: **compliance**, **AI writing**, and **appeal rescue**.
+> **Make AI recommend your products.** ListingGood is the engine that helps Amazon's AI — Rufus, COSMO, and agentic shopping agents — find, trust, and recommend your listings. It does this through three things: **compliance**, **AI writing**, and **appeal rescue**.
 
 [![Website](https://img.shields.io/badge/website-listinggood.com-blue)](https://listinggood.com) [![MCP](https://img.shields.io/badge/MCP-server-green)](https://listinggood.com/developers) [![Free check](https://img.shields.io/badge/free%20check-no%20login-success)](https://listinggood.com/scan)
 
 ---
 
+## Installation
+
+ListingGood runs as a **hosted, remote Streamable HTTP MCP server** — there is nothing to install locally. Just point your MCP client at the endpoint with your API key.
+
+**Endpoint:**
+
+```
+https://listinggood.com/mcp?apikey=YOUR_API_KEY
+```
+
+Get your free API key at **[listinggood.com/developers](https://listinggood.com/developers)** (signup grants 10 permanent stars).
+
+### Claude Desktop / Cursor / VS Code / Windsurf / Cline
+
+```json
+{
+  "mcpServers": {
+    "listinggood": {
+      "type": "streamable-http",
+      "url": "https://listinggood.com/mcp?apikey=YOUR_API_KEY"
+    }
+  }
+}
+```
+
+> No Docker build, no `npx` command, no local Python runtime — the API key is passed as a URL query parameter (`?apikey=...`) exactly as shown above.
+
+---
+
 ## Why this exists
 
-Amazon's discovery front-door has moved to AI. A listing that is **not machine-readable and compliance-clean** is far less likely to be cited inside Alexa for Shopping, COSMO answers, or agentic buying flows. Traditional seller tools tell you *what to sell* — they don't tell you whether your listing will be *recommended*.
+Amazon's discovery front-door has moved to AI. A listing that is **not machine-readable and compliance-clean** is far less likely to be cited inside Rufus answers, COSMO-driven recommendations, or agentic buying flows. Traditional seller tools tell you *what to sell* — they don't tell you whether your listing will be *recommended*.
 
 ListingGood closes that gap:
 
@@ -18,6 +47,33 @@ ListingGood closes that gap:
 - **Appeal rescue** — drafts a Plan of Action (POA) when a listing is suppressed.
 
 The combined result is an **AI Recommendation Readiness Score** = compliance × 0.55 + AI readability × 0.45.
+
+---
+
+## Available Tools
+
+### `ai_readiness_check`
+Score how likely Amazon's AI (Rufus, COSMO) is to recommend a listing. Returns a combined AI Recommendation Readiness Score with actionable fixes. **Free, no API key required.**
+
+### `compliance_check`
+Fast pre-publish compliance gate: scans for red-line words and category risks before you generate or publish. **Free with API key.**
+
+### `compliance_scan`
+Deep, knowledge-base-driven compliance audit across prohibited terms, IP risk, category rules, and GPSR. Returns a written report. **2 credits.**
+
+### `generate_listing`
+Generate optimized title + bullets + description for selected marketplaces. **1 credit per marketplace.**
+
+### `fill_from_sentence`
+Turn a one-sentence product description into structured listing fields. **Free with API key.**
+
+### `generate_poa`
+Draft a submission-ready Plan of Action from an Amazon violation or suspension notice. **4 credits.**
+
+### `analyze_review`
+Analyze a negative review for root cause and a suggested response or POA angle. **2 credits.**
+
+---
 
 ## What's in this repo
 
@@ -35,47 +91,21 @@ This repository bundles ListingGood's **agent skills** and **MCP server** config
 | `listinggood-amazon-eu-localization` | EU marketplace (DE/ES/FR/IT) localization |
 | **MCP server** | 7 tools (free check, deep scan, AI generation, POA, …) + vertical MCPs (Electronics / Toys / Beauty / Home) |
 
-## Quick start — connect the MCP
+---
+
+## Quick start
 
 1. Get a free API key at **[listinggood.com/developers](https://listinggood.com/developers)**.
-2. Add the server to your MCP client:
-
-```json
-{
-  "mcpServers": {
-    "listinggood": {
-      "url": "https://listinggood.com/mcp?apikey=<YOUR_API_KEY>",
-      "transport": "streamable-http"
-    }
-  }
-}
-```
-
+2. Add the server to your MCP client using the config block in [Installation](#installation).
 3. Restart your client. ListingGood's tools appear as available MCP tools.
 
-> This is a **remote Streamable HTTP MCP server** — no local install, Docker build, or `npx` command is required. The API key is passed as a URL query parameter (`?apikey=...`) exactly as shown above.
-
-## Tools
-
-The MCP server exposes the following tools:
-
-| Tool | What it does | Cost |
-|---|---|---|
-| `ai_readiness_check` | **Score** — the only tool returning a combined AI-recommendation-readiness number (compliance ×0.55 + readability ×0.45), instant | Free, no API key |
-| `compliance_check` | **Quick gate** — fast red-line-word + category-risk scan before you write; shallow and instant, not a full audit | Free with API key |
-| `compliance_scan` | **Deep report** — knowledge-base-driven full compliance audit (prohibited words, IP, category, GPSR, image support); a written report, not a quick check | 2 credits |
-| `generate_listing` | Generate optimized title + bullets + description for selected marketplaces | 1 credit per marketplace |
-| `fill_from_sentence` | Turn a one-sentence product description into structured listing fields | Free with API key |
-| `generate_poa` | Draft an appeal Plan of Action from an Amazon violation notice | 4 credits |
-| `analyze_review` | Analyze a negative review for root cause and a suggested response | 2 credits |
-
-> **Three compliance tiers** — pick by depth, not by name: `ai_readiness_check` returns a *score*, `compliance_check` is a *quick pre-publish gate*, and `compliance_scan` is a *deep async written report*.
-
-All paid tools return a task ID and poll until completion. The free `ai_readiness_check` returns results immediately.
+---
 
 ## Try it now (no account)
 
 Run a free compliance + AI-readability check at **[listinggood.com/scan](https://listinggood.com/scan)** — paste your title and bullets, get a report in seconds.
+
+---
 
 ## Links
 
