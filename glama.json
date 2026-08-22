@@ -1,4 +1,8 @@
 {
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "maintainers": [
+    "ryanyang828"
+  ],
   "schemaVersion": "1.0",
   "server": {
     "name": "ListingGood MCP",
@@ -25,12 +29,29 @@
         "inputSchema": {
           "type": "object",
           "properties": {
-            "text": { "type": "string", "description": "Listing title + bullets + description" },
-            "marketplace": { "type": "string", "default": "US", "description": "Marketplace code: US/DE/ES/FR/IT/JP/AE/SA/UK" },
-            "lang": { "type": "string", "default": "en", "description": "zh or en" },
-            "email": { "type": "string", "default": "", "description": "Optional lead email" }
+            "text": {
+              "type": "string",
+              "description": "Listing title + bullets + description"
+            },
+            "marketplace": {
+              "type": "string",
+              "default": "US",
+              "description": "Marketplace code: US/DE/ES/FR/IT/JP/AE/SA/UK"
+            },
+            "lang": {
+              "type": "string",
+              "default": "en",
+              "description": "zh or en"
+            },
+            "email": {
+              "type": "string",
+              "default": "",
+              "description": "Optional lead email"
+            }
           },
-          "required": ["text"]
+          "required": [
+            "text"
+          ]
         }
       },
       {
@@ -39,11 +60,24 @@
         "inputSchema": {
           "type": "object",
           "properties": {
-            "text": { "type": "string", "description": "Listing copy" },
-            "lang": { "type": "string", "default": "en", "description": "zh or en" },
-            "category": { "type": "string", "default": "", "description": "Optional category, e.g. electronics / apparel" }
+            "text": {
+              "type": "string",
+              "description": "Listing copy"
+            },
+            "lang": {
+              "type": "string",
+              "default": "en",
+              "description": "zh or en"
+            },
+            "category": {
+              "type": "string",
+              "default": "",
+              "description": "Optional category, e.g. electronics / apparel"
+            }
           },
-          "required": ["text"]
+          "required": [
+            "text"
+          ]
         }
       },
       {
@@ -52,13 +86,34 @@
         "inputSchema": {
           "type": "object",
           "properties": {
-            "text": { "type": "string", "description": "Listing title/bullets/description" },
-            "marketplace": { "type": "string", "default": "US", "description": "Marketplace code" },
-            "category": { "type": "string", "default": "", "description": "Optional category" },
-            "lang": { "type": "string", "default": "en", "description": "zh or en" },
-            "images": { "type": "array", "default": [], "description": "Optional list of data:image base64, max 5, each <4MB" }
+            "text": {
+              "type": "string",
+              "description": "Listing title/bullets/description"
+            },
+            "marketplace": {
+              "type": "string",
+              "default": "US",
+              "description": "Marketplace code"
+            },
+            "category": {
+              "type": "string",
+              "default": "",
+              "description": "Optional category"
+            },
+            "lang": {
+              "type": "string",
+              "default": "en",
+              "description": "zh or en"
+            },
+            "images": {
+              "type": "array",
+              "default": [],
+              "description": "Optional list of data:image base64, max 5, each <4MB"
+            }
           },
-          "required": ["text"]
+          "required": [
+            "text"
+          ]
         }
       },
       {
@@ -67,12 +122,29 @@
         "inputSchema": {
           "type": "object",
           "properties": {
-            "issue": { "type": "string", "description": "The violation / issue" },
-            "asin": { "type": "string", "default": "", "description": "Optional ASIN" },
-            "marketplace": { "type": "string", "default": "US", "description": "Marketplace code" },
-            "lang": { "type": "string", "default": "en", "description": "zh or en" }
+            "issue": {
+              "type": "string",
+              "description": "The violation / issue"
+            },
+            "asin": {
+              "type": "string",
+              "default": "",
+              "description": "Optional ASIN"
+            },
+            "marketplace": {
+              "type": "string",
+              "default": "US",
+              "description": "Marketplace code"
+            },
+            "lang": {
+              "type": "string",
+              "default": "en",
+              "description": "zh or en"
+            }
           },
-          "required": ["issue"]
+          "required": [
+            "issue"
+          ]
         }
       },
       {
@@ -81,12 +153,29 @@
         "inputSchema": {
           "type": "object",
           "properties": {
-            "review": { "type": "string", "description": "Review text" },
-            "asin": { "type": "string", "default": "", "description": "Optional ASIN" },
-            "marketplace": { "type": "string", "default": "US", "description": "Marketplace code" },
-            "lang": { "type": "string", "default": "en", "description": "zh or en" }
+            "review": {
+              "type": "string",
+              "description": "Review text"
+            },
+            "asin": {
+              "type": "string",
+              "default": "",
+              "description": "Optional ASIN"
+            },
+            "marketplace": {
+              "type": "string",
+              "default": "US",
+              "description": "Marketplace code"
+            },
+            "lang": {
+              "type": "string",
+              "default": "en",
+              "description": "zh or en"
+            }
           },
-          "required": ["review"]
+          "required": [
+            "review"
+          ]
         }
       },
       {
@@ -95,11 +184,24 @@
         "inputSchema": {
           "type": "object",
           "properties": {
-            "sentence": { "type": "string", "description": "One-sentence product description" },
-            "marketplace": { "type": "string", "default": "US", "description": "Marketplace code" },
-            "lang": { "type": "string", "default": "en", "description": "zh or en" }
+            "sentence": {
+              "type": "string",
+              "description": "One-sentence product description"
+            },
+            "marketplace": {
+              "type": "string",
+              "default": "US",
+              "description": "Marketplace code"
+            },
+            "lang": {
+              "type": "string",
+              "default": "en",
+              "description": "zh or en"
+            }
           },
-          "required": ["sentence"]
+          "required": [
+            "sentence"
+          ]
         }
       },
       {
@@ -108,13 +210,34 @@
         "inputSchema": {
           "type": "object",
           "properties": {
-            "cn_name": { "type": "string", "description": "Product Chinese name (required)" },
-            "sku": { "type": "string", "description": "Product SKU (required)" },
-            "marketplaces": { "type": "array", "default": [], "description": "List of marketplace codes, defaults to all 9" },
-            "price": { "type": "string", "default": "", "description": "Optional price" },
-            "lang": { "type": "string", "default": "en", "description": "zh or en" }
+            "cn_name": {
+              "type": "string",
+              "description": "Product Chinese name (required)"
+            },
+            "sku": {
+              "type": "string",
+              "description": "Product SKU (required)"
+            },
+            "marketplaces": {
+              "type": "array",
+              "default": [],
+              "description": "List of marketplace codes, defaults to all 9"
+            },
+            "price": {
+              "type": "string",
+              "default": "",
+              "description": "Optional price"
+            },
+            "lang": {
+              "type": "string",
+              "default": "en",
+              "description": "zh or en"
+            }
           },
-          "required": ["cn_name", "sku"]
+          "required": [
+            "cn_name",
+            "sku"
+          ]
         }
       }
     ]
