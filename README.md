@@ -55,6 +55,9 @@ The combined result is an **AI Recommendation Readiness Score** = compliance × 
 ### `ai_readiness_check`
 Score how likely Amazon's AI (Rufus, COSMO) is to recommend a listing. Returns a combined AI Recommendation Readiness Score with actionable fixes. **Free, no API key required.**
 
+### `agent_ready_check`
+Score whether a product listing is **Agent-Ready** for AI shopping agents (OpenAI ACP / Google UCP era). Platform-agnostic: Amazon, Shopify, Walmart, TikTok Shop or any storefront. Returns four dimensions — structured attributes, entity clarity, trust & compliance, agent actionability — plus ranked fixes. **Free, no API key required, runs fully locally in the MCP server (no credits).**
+
 ### `compliance_check`
 Fast pre-publish compliance gate: scans for red-line words and category risks before you generate or publish. **Free with API key.**
 
@@ -89,7 +92,7 @@ This repository bundles ListingGood's **agent skills** and **MCP server** config
 | `listinggood-amazon-title-optimizer` | A9/A10 title optimization |
 | `listinggood-amazon-bullet-writer` | Benefit-led bullet points |
 | `listinggood-amazon-eu-localization` | EU marketplace (DE/ES/FR/IT) localization |
-| **MCP server** | 7 tools (free check, deep scan, AI generation, POA, …) + vertical MCPs (Electronics / Toys / Beauty / Home) |
+| **MCP server** | 8 tools (free check, Agent-Ready score, deep scan, AI generation, POA, …) + vertical MCPs (Electronics / Toys / Beauty / Home) |
 
 ---
 
