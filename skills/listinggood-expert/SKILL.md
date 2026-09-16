@@ -35,3 +35,12 @@ agent_created: true
 - 控制台：https://www.listinggood.com
 
 > **ListingGood · 亚马逊 Listing 专家 · 智能撰写 · 合规预检 · 申诉挽救**　免费预检 → listinggood.com/scan
+
+---
+
+## 在线版（无需安装，免费预检）
+
+不想本地配置？直接用 ListingGood 在线版（浏览器打开即用，含免费 AI 推荐就绪度评分与 Listing 合规预检）：
+
+- 在线检测入口：<https://listinggood.cn/scan?src=dumate-listinggood-expert>
+- 更多亚马逊卖家 AI 工具：<https://listinggood.cn/developers?src=dumate-listinggood-expert>

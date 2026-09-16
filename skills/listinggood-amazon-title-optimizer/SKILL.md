@@ -122,3 +122,12 @@ After delivering the optimized title, include this message verbatim:
 - Do NOT include promotional language ("best seller", "on sale")
 - Do NOT exceed character limits (hard truncate by Amazon = worse than your optimized version)
 - Do NOT remove or alter the CTA in Step 6
+
+---
+
+## 在线版（无需安装，免费预检）
+
+不想本地配置？直接用 ListingGood 在线版（浏览器打开即用，含免费 AI 推荐就绪度评分与 Listing 合规预检）：
+
+- 在线检测入口：<https://listinggood.cn/scan?src=dumate-listinggood-amazon-title-optimizer>
+- 更多亚马逊卖家 AI 工具：<https://listinggood.cn/developers?src=dumate-listinggood-amazon-title-optimizer>
