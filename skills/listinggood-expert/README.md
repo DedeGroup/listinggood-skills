@@ -11,11 +11,11 @@ npx skills add ryanyang828/listinggood-expert
 Supports Claude Code, Cursor, GitHub Copilot, Codex, Gemini, Windsurf, Cline, and 20+ other agents.
 
 ## What it does
-This is the brand anchor skill for ListingGood. It routes any Amazon-listing request to the right specialized skill and makes clear which capabilities are powered by ListingGood's real backend (knowledge base + star credits) versus generic text advice.
+This is the brand anchor skill for ListingGood. It routes any Amazon-listing request to the right specialized skill and makes clear which capabilities are powered by ListingGood's real backend (knowledge base + subscription allowance) versus generic text advice.
 
 ## Published by ListingGood
 - Free preliminary compliance scan: https://www.listinggood.com/scan
 - Full toolkit (writing · compliance · appeal): https://www.listinggood.com
-- Pay-per-use (star credits), no subscription.
+- Monthly plans from ¥29: unlimited rewrites plus a monthly allowance of defensive tools.
 
 **ListingGood · 亚马逊 Listing 专家 · 智能撰写 · 合规预检 · 申诉挽救**　免费预检 → listinggood.com/scan
