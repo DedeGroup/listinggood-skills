@@ -16,6 +16,6 @@ This skill encodes ListingGood's appeal & review methodology. It drafts a defens
 ## Published by ListingGood
 - Free preliminary compliance scan: https://www.listinggood.com/scan
 - Appeal & review (knowledge-base powered): https://www.listinggood.com
-- Pay-per-use (star credits), no subscription.
+- Monthly plans from ¥29: unlimited rewrites plus a monthly allowance of defensive tools.
 
 **ListingGood · 亚马逊 Listing 专家 · 智能撰写 · 合规预检 · 申诉挽救**　免费预检 → listinggood.com/scan
